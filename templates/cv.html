@@ -1,0 +1,99 @@
+{% load static %}
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titleCV }}</title>
+    <link type="image/x-icon" rel="shortcut icon" href="{% static 'img/cv.ico' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+
+<body>
+    <div class="general__area">
+        <div class="top__area">
+            <div class="bio__area">
+                <div class="photo__area"><img src="{% static 'img/photo.jpg' %}" alt="{{ yourName | safe }}" /></div>
+                <div class="info__area">
+                    <p class="name">{{ yourName }}</p>
+                    <p class="profession">{{ yourProfession }}</p>
+                    <p class="bio">{{ yourBio }}</p>
+                </div>
+            </div>
+            <div class="personal__area">
+                <p class="country">{{ yourCountry }}</p>
+                <div class="social__area">
+                    {{ yourContact | safe }}
+                </div>
+                <p class="birth__date">{{ yourBirthday }}</p>
+            </div>
+            <div class="exp__area">
+                {% if yourSkills %}
+                <div class="exp__box">
+                    <ol aria-label="Skills">
+                        {{ yourSkills | safe }}
+                    </ol>
+                </div>
+                {% endif %}
+                {% if yourHobbies %}
+                <div class="exp__box">
+                    <ol aria-label="Hobbies">
+                        {{ yourHobbies | safe }}
+                    </ol>
+                </div>
+                {% endif %}
+                {% if yourCerts %}
+                <div class="exp__box">
+                    <ol aria-label="Certificates">
+                        {{ yourCerts | safe }}
+                    </ol>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="mid__area">
+            <div class="status__area">
+                {% if yourEdu %}
+                <div class="education__area">
+                    <ol aria-label="Education">
+                        {{ yourEdu | safe }}
+                    </ol>
+                </div>
+                {% endif %}
+                {% if yourWork %}
+                <div class="work__area">
+                    <ol aria-label="Work">
+                        {{ yourWork | safe }}
+                    </ol>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="bottom__area">
+            <div class="history__area">
+                {% if yourProject %}
+                <div class="project__area">
+                    <ol aria-label="Projects">
+                        {{ yourProject | safe }}
+                    </ol>
+                </div>
+                {% endif %}
+                {% if yourExtras %}
+                <div class="extras">
+                    <ol aria-label="Extras">
+                        {{ yourExtras | safe }}
+                    </ol>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <footer>{{ footerText | safe }}</footer>
+    <script type="text/javascript" src="{% static 'js/vanilla-tilt.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/parallax.js' %}"></script>
+</body>
+
+</html>

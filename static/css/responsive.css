@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+@media (max-width:1025px) {
+
+    body {
+        line-height: 17.5px;
+    }
+
+    .photo__area img {
+        width : 180px;
+        height: 180px;
+    }
+
+    .name {
+        font-size: 22.4px;
+    }
+
+    .profession {
+        font-size: 14.5px;
+    }
+
+    .bio {
+        font-size: 12px;
+    }
+
+    .personal__area p,
+    .personal__area a {
+        font-size: 16px;
+    }
+
+    ol li {
+        font-size: 12.8px;
+    }
+
+    ol::before {
+        font-size: 20.8px;
+    }
+
+    li::before {
+        width    : 26px;
+        height   : 26px;
+        font-size: 14.4px;
+        margin   : 0 5px 0 0;
+    }
+
+    .year,
+    .percent {
+        font-size: 11px;
+    }
+
+    .main {
+        width    : 50%;
+        font-size: 12.8px;
+    }
+
+    .project__area,
+    .extras,
+    .personal__area,
+    .bio__area,
+    .exp__box,
+    .education__area,
+    .work__area {
+        padding: 12px;
+    }
+
+    .exp__box {
+        width: 30%;
+    }
+
+}
+
+@media (max-width:769px) {
+
+    .general__area {
+        width: 85%;
+    }
+
+    .bio__area .name {
+        line-height: 25px;
+    }
+
+    .photo__area {
+        margin-right: 7px;
+    }
+
+    .info__area {
+        margin-left: 7px;
+    }
+
+    .top__area>*:last-child,
+    .mid__area>*:last-child,
+    .bottom__area>*:last-child {
+        margin: 0;
+    }
+
+    .personal__area .social__area a {
+        line-height: 20px;
+    }
+
+    .exp__box,
+    .education__area,
+    .work__area,
+    .project__area,
+    .extras {
+        width : 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .exp__area,
+    .status__area,
+    .history__area {
+        flex-direction: column;
+    }
+
+    .name {
+        font-size: 20.2px;
+    }
+
+    .profession {
+        font-size: 13.05px;
+    }
+
+    .bio {
+        font-size: 11.8px;
+    }
+
+    .personal__area p,
+    .personal__area a {
+        font-size: 15.4px;
+    }
+
+    ol::before {
+        font-size: 18.8px;
+    }
+
+    li::before {
+        width    : 23.4px;
+        height   : 23.4px;
+        font-size: 13px;
+    }
+
+    .year,
+    .percent {
+        right    : 10px;
+        font-size: 10px;
+    }
+
+    .main {
+        font-size: 11.6px;
+    }
+
+    .personal__area p,
+    .personal__area a,
+    .personal__area i {
+        font-size: 11.5px;
+    }
+
+    .personal__area .social__area a {
+        margin: 0 2.5px;
+    }
+
+    .history__area div:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+@media (max-width:500px) {
+
+    .year,
+    .percent {
+        font-size: 8px;
+        padding  : 1px 3px;
+    }
+
+    .photo__area img {
+        width : 100%;
+        height: 100%;
+    }
+
+    .info__area>p {
+        margin: 5px 0;
+        width : 100%;
+    }
+
+    li::before {
+        margin: 0 7.5px 0 0;
+    }
+
+}
+
+@media (max-width:321px) {
+    .info__area>p {
+        margin: 2.5px 0;
+        width : 100%;
+    }
+}

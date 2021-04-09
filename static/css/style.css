@@ -1,0 +1,301 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+:root {
+    /* If you want, you can change colors. */
+    --main-color  : #0075A7;
+    --second-color: #f90;
+    --text-color  : #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background     : var(--main-color);
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
+    margin         : 0;
+    font-family    : 'Ubuntu', sans-serif;
+    user-select    : none;
+}
+
+p {
+    line-height: 20px;
+}
+
+img {
+    transition: opacity .5s;
+}
+
+img:hover {
+    opacity: .75;
+}
+
+a[href] {
+    color          : var(--text-color);
+    text-decoration: none;
+    transition     : color .5s;
+}
+
+a[href]:hover {
+    color: var(--second-color);
+}
+
+a[href]:not(.social, .author)::after {
+    content    : " \f0c1";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+}
+
+.general__area {
+    background   : #fff;
+    width        : 75%;
+    max-width    : 1200px;
+    border-radius: 20px;
+    margin       : 20px 0;
+    padding      : 10px;
+    box-shadow   : 3px 3px 8px 8px rgba(20, 20, 20, 0.12);
+    overflow     : hidden;
+}
+
+.top__area,
+.mid__area,
+.bottom__area {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-direction : column;
+    color          : var(--text-color);
+    text-shadow    : 1px 1px 2px rgba(20, 20, 20, 0.75);
+}
+
+.top__area>*,
+.mid__area>*,
+.bottom__area>* {
+    width : 100%;
+    margin: 0 0 10px 0;
+}
+
+.bottom__area>*:last-child {
+    margin: 0;
+}
+
+.project__area,
+.extras,
+.personal__area,
+.bio__area,
+.exp__box,
+.education__area,
+.work__area {
+    box-shadow: 6px 3px 4px 1px rgba(20, 20, 20, 0.25);
+}
+
+.bio__area {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-direction : row;
+}
+
+.photo__area {
+    margin-right   : 35px;
+    width          : 50%;
+    justify-content: flex-end;
+    display        : flex;
+    align-items    : center;
+}
+
+.photo__area img {
+    width        : 200px;
+    height       : auto;
+    border-radius: 60%;
+    box-shadow   : 6px 3px 4px 1px rgba(20, 20, 20, 0.25);
+}
+
+.info__area {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-content  : flex-start;
+    margin-left    : 35px;
+    width          : 50%;
+}
+
+.name {
+    font-size  : 28px;
+    font-weight: 700;
+    margin     : 10px 0;
+    width      : 75%;
+}
+
+.profession {
+    font-size  : 17.5px;
+    font-weight: 500;
+    margin     : 10px 0;
+    width      : 75%;
+}
+
+.bio {
+    font-size  : 15px;
+    font-weight: 300;
+    margin     : 10px 0;
+    width      : 75%;
+}
+
+.personal__area,
+.exp__area,
+.status__area,
+.history__area {
+    display        : flex;
+    justify-content: space-between;
+    flex-direction : row;
+}
+
+.project__area,
+.extras,
+.personal__area,
+.bio__area,
+.exp__box,
+.education__area,
+.work__area {
+    background: var(--main-color);
+    ;
+    border-radius: 15px;
+    min-width    : 30%;
+    padding      : 15px;
+    height       : auto;
+    position     : relative;
+}
+
+.education__area,
+.work__area,
+.project__area,
+.extras {
+    width: 47.5%;
+}
+
+.personal__area {
+    align-items: center;
+}
+
+.personal__area p,
+.personal__area a {
+    font-size: 20px;
+}
+
+.personal__area .social__area a {
+    margin: 0 5px;
+}
+
+.social__area,
+.country,
+.birth__date {
+    width: 33.33%;
+}
+
+.country {
+    text-align: left;
+}
+
+.social__area {
+    text-align: center;
+}
+
+.birth__date {
+    text-align: right;
+}
+
+.country::before {
+    content    : "\f3c5\00a0";
+    font-family: "Font Awesome 5 Free";
+    color      : var(--second-color);
+    font-weight: 700;
+}
+
+.birth__date::before {
+    content    : "\f1fd\00a0";
+    font-family: "Font Awesome 5 Free";
+    color      : var(--second-color);
+    font-weight: 700;
+}
+
+ol {
+    list-style   : none;
+    counter-reset: cv-counter;
+    padding      : 0;
+    margin       : 0;
+}
+
+ol::before {
+    content      : attr(aria-label);
+    display      : block;
+    text-align   : center;
+    margin-bottom: 10px;
+    font-size    : 26px;
+    padding      : 5px;
+    border-bottom: 3px solid var(--text-color);
+    box-shadow   : 5px -3px 4px 1px rgba(20, 20, 20, 0.20);
+}
+
+ol li {
+    counter-increment: cv-counter;
+    margin           : 10px 0;
+    display          : flex;
+    align-items      : center;
+    flex-direction   : row;
+    font-size        : 16px;
+}
+
+li::before {
+    content        : counter(cv-counter);
+    background     : var(--second-color);
+    width          : 32.5px;
+    height         : 32.5px;
+    display        : inline-flex;
+    align-items    : center;
+    justify-content: center;
+    border-radius  : 60%;
+    font-size      : 18px;
+    margin         : 0 10px 0 0;
+    box-shadow     : 6px 3px 4px 1px rgba(20, 20, 20, 0.25);
+}
+
+.main {
+    max-width: 60%;
+    font-size: 16px;
+}
+
+.full {
+    max-width: 100%;
+}
+
+.year,
+.percent {
+    background   : var(--second-color);
+    padding      : 2px 6px;
+    border-radius: 20px;
+    box-shadow   : 6px 3px 4px 1px rgba(20, 20, 20, 0.25);
+    max-width    : 35%;
+    font-size    : 15px;
+}
+
+.year,
+.percent {
+    position: absolute;
+    right   : 15px;
+}
+
+.percent::after {
+    content: "%";
+}
+
+footer {
+    padding      : 10px;
+    margin-bottom: 15px;
+    text-shadow  : 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
