@@ -17,7 +17,6 @@
 
 # Installation
 
----
 
 ### 1. `Django` required to use the template.
 
