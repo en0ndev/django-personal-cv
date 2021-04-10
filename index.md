@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+# Django Personal CV Template
 
-You can use the [editor on GitHub](https://github.com/en0ndev/django-personal-cv/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Create your CV with Django.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[**Demo**](https://teknolojiseven.com/demo/django_personal_cv/templates/cv.html)
 
-### Markdown
+![Django CV Template](https://www.teknolojiseven.com/demo/django_personal_cv/static/img/img.png?raw=true "Django CV Template by en0ndev")
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+---
 
-```markdown
-Syntax highlighted code block
+# Contributions
 
-# Header 1
-## Header 2
-### Header 3
+|                          |                        |
+| ------------------------ | ---------------------- |
+| **_Template Name_**      | **Django Personal CV** |
+| **_Template Developer_** | **en0ndev**            |
 
-- Bulleted
-- List
+# Installation
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+### 1. `Django` required to use the template.
 
-[Link](url) and ![Image](src)
-```
+### 2. Create a Django project with `"cv"` name.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### 3. `Fork` this repository and copy all files to your `"cv"` Django project.
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/en0ndev/django-personal-cv/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### 4. Go to `/cv/data.py` for customize text labels.
